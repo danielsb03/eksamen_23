@@ -1,0 +1,45 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+
+}
+#grid-container{
+    padding:1rem;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+header ul{
+    list-style: none;
+    padding: 0;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+
+header ul li:first-child{
+    font-weight: 700;
+    text-decoration: #e6bd43 underline;
+    text-underline-offset: 5px; 
+    
+}
+/*Her har jeg brukt Ann-Charlotte sin knapp design, les kilde 1.1 for mer info*/
+.yellow-btn {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #e6bd43;
+    color: #000000;
+    font-weight: 400;
+}
+.yellow-btn span{
+    font-weight: 600;
+}
