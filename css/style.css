@@ -56,10 +56,52 @@ main{
     color: #000000;
     font-weight: 400;
 }
+
+.yellow-line{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*Dette fikk jeg av en kommentar i stack overflow https://stackoverflow.com/questions/7294369/how-can-i-make-an-underline-some-pixels-longer-than-the-headline*/
+.yellow-line h2{
+    display: inline-block;
+    font-size: 1em;
+    padding: 0 50px 10px 0px;
+    border-bottom: 3px solid #e6bd43;
+    text-underline-offset: 12px;
+    width: 81%;
+}
+
+.yellow-line h4{
+    width: 81%;
+    font-size: 1em;
+}
+.yellow-line img{
+    width: 81%;
+  padding: 2rem 0 0 0;
+}
+
+.border-boxes{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.border-boxes h3{
+    max-width: 50%;
+    height: auto;
+    border: solid 2px black;
+    text-align: center;
+    margin: 15px;
+    padding: 6px;
+  }
+
 .yellow-btn span{
     font-weight: 600;
     font-size: 1.2em;
 }
+
 
 /* Bilde kom fra pinterest, se kilde 1.2 for mer info*/
 /* alt av justering med background fikk jeg fra youtube videon https://www.youtube.com/watch?v=zHZRFwWQt2w
@@ -77,6 +119,7 @@ se kilde 1.3 for mer info */
     padding: 5rem;
 
 }
+
 
 .top-section h1{
     margin: 0 0 1rem 0;
