@@ -74,19 +74,13 @@
     }
     .box-text{
         
-        max-width: 350px;
-        min-width: 200px;
+        flex-grow: 0.2;
         display: flex;
         align-items: center;
         flex-direction: column;
         
     }
-    .last-img1{
-        flex-grow: 1;
-    }
-    .last-img2{
-        flex-grow: 2;
-    }
+    
 
     /*Dette fikk jeg av en kommentar i stack overflow https://stackoverflow.com/questions/7294369/how-can-i-make-an-underline-some-pixels-longer-than-the-headline*/
     .yellow-line h2{
