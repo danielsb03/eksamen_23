@@ -1,8 +1,8 @@
     *{
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
         box-sizing: border-box;
+      }
 
-    }
     body{
         margin:0;
         width: 100%;
@@ -15,12 +15,13 @@
 
     header{ 
         grid-area: header;
-        padding: 1rem;
+
     }
     header nav{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
 
     }
     header ul{
@@ -50,11 +51,13 @@
     /*Her har jeg brukt Ann-Charlotte sin knapp design, les kilde 1.1 for mer info*/
     .yellow-btn {
         display: inline-block;
-        padding: 1rem;
+        padding: 0.5rem;
         text-decoration: none;
         background-color: #e6bd43;
         color: #000000;
         font-weight: 400;
+        font-size: 1em;
+
     }
     
 
@@ -68,13 +71,22 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        /* use this on desktop
+    }
+    .box-text{
+        
         max-width: 350px;
         min-width: 200px;
-        padding:0 0 0 1rem;
-*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
     }
-
+    .last-img1{
+        flex-grow: 1;
+    }
+    .last-img2{
+        flex-grow: 2;
+    }
 
     /*Dette fikk jeg av en kommentar i stack overflow https://stackoverflow.com/questions/7294369/how-can-i-make-an-underline-some-pixels-longer-than-the-headline*/
     .yellow-line h2{
@@ -101,10 +113,12 @@
     .yellow-line h4{
         width: 81%;
         font-size: 1em;
+        text-align: center;
     }
     .bdd img{
-        width: 81%;
-        padding: 2rem 0 0 0;
+        width: 100%;
+        padding: 2rem 1rem 0 1rem;
+        height: auto;
     }
     .yellow-line img{
         width: 81%;
@@ -142,7 +156,7 @@
     /* Det med gradiant fikk jeg av chat GPT, skjekk kilde 1.4 for mer info*/
     .top-section{
         background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5)),
-                    url(/img/latop-phone.jpg);
+                    url(/eksamen_23/img/latop-phone.jpg);
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -159,13 +173,10 @@
     text-align: center;
     
     }
-    .top-section p{
-        font-weight: 5300;
     
-    }
 
     .a-top-section{
-    background-image: url(/img/latop-phone.jpg);
+    background-image: url(/eksamen_23/img/latop-phone.jpg);
     background-size: cover;
     text-align: start;
     padding: 5rem;
@@ -192,7 +203,7 @@
     }
     .middle-section h2{
         margin: 0 0 1rem 0;
-        font-size: 1em;
+        font-size: 1.3em;
         text-align: center;
     }
     .img-flex{
@@ -225,15 +236,16 @@
         align-items: center;
     }
     .top-bottom-section h2{
-        padding: 0 5rem;
+        padding: 0 7rem;
         font-size: 1.5em;
         text-align: start;
-        display: block;
+        margin: 3rem 0 0 0;
+
     }
     .top-bottom-section img{
         width: 100%;
         height: auto;
-        padding: 1rem;
+        padding: 3rem 3rem 0rem 3rem;
     }
     .top-bottom-section p{
         padding: 0 8rem 0 7rem;
@@ -260,6 +272,9 @@
         flex-wrap: wrap;
         align-items: center;
         margin: 3rem 0 0 0;
+    }
+    .bottom-section h2{
+        font-size: 1.5em;
     }
     .bottom-section section{
         height:auto;
@@ -422,26 +437,34 @@
         margin: 0rem 2rem 0 0;
         font-size: 2em;
     }
-    @media only screen and (min-width: 450px) {
-        .flex-container{
+
+    .flex-container{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
+
+        .bottom-section section p{
+            padding: 0;
+        }
+        
+    @media only screen and (min-width: 450px) {
+
         .flex-container section{
             height: auto;
             width: 50%;
         }
-        .bottom-section section p{
-            padding: 0;
+        .top-bottom-section p{
+            text-align: center;
         }
+        
     }
+    
     @media only screen and (min-width: 600px) {
         #grid-container {
             grid-template-areas: "header header header" "main main main" "footer footer footer";
         }
         header nav{
-
-        
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -468,7 +491,7 @@
             font-size:1.5em;
         }
         .top-bottom-section{
-            align-items: start;
+            align-items: center;
             flex-direction: row;
         }
         #tps-flex{
@@ -485,6 +508,11 @@
         }
         .top-bottom-section img{
             min-width: 300px;
+            max-width: 450px;
+            padding: 2rem;
+        }
+        .bottom-section h2{
+            font-size: 2em;
         }
         .black-brd-btn{
             margin: 0;
@@ -498,5 +526,70 @@
         }
         .flex-container section{
             width: 25%;
+        }
+        .newsletter{
+            padding: 1rem 0 0 0;
+        }
+        .newsletter h2{
+            font-size: 2em;
+        }
+        #signup:hover{
+            background-color:black ;
+            color: #e6bd43;
+        }
+        footer{
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 3rem 0 3rem 1rem;
+        }
+        footer ul{
+            padding: 0;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .yellow-btn{
+            font-size:1.2em;
+            padding: 0.8rem;
+        }
+        header nav ul{
+            column-gap: 1.5rem;
+            font-size: 1.5em;
+        }
+        .top-section h1{
+            margin:0;
+            font-size: 2.5em;
+        }
+        .top-section p{
+            font-size: 1.2em;
+            padding: 0 8rem;
+        }
+        .middle-section p{
+            font-size: 1.2em;
+            padding: 0 8rem;
+        }
+        .middle-section h2{
+            font-size: 2em;
+            padding: 0 14rem;
+        }
+        .top-bottom-section p{
+        padding: 0 13rem 0 0;
+        margin: 0 0 1rem 0;
+        }
+        .top-bottom-section img{
+            padding: 2rem 2rem 2rem 6rem;
+        }
+        .bottom-section h2{
+            font-size: 3em;
+        }
+        .newsletter{
+            padding:4rem 0 12rem 0;
+        }
+        .newsletter h2{
+            text-align: center;
+            font-size: 3em;
+            margin: 0 0 2rem 0rem;
+        }
+        .newsletter form {
+            justify-content: center;
         }
     }
