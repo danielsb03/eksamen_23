@@ -11,8 +11,10 @@
         
         display: grid;
         grid-template-areas: "header" "main" "footer";
+        /*Dette ble inspirert av Ann Charlotte sin kode i forelesningen, se kilde 1.8 for mer info*/
+        max-width: 1600px;
+        margin: 0 auto;
     }
-
     header{ 
         grid-area: header;
 
@@ -43,6 +45,22 @@
         color: black;
         text-decoration: none;
     }
+    
+    /* Fikk dette av en youtube video om hvordan man kan pynte en skip to main link https://www.youtube.com/watch?v=jDDaOFr9nqQ */
+    .skip-link{
+        position: absolute;
+        transform: translateY(-120%);
+        background-color: #252525;
+        color: #e6bd43;
+        padding: 0.5rem 1.5rem;
+        border: 0 0 0.25rem;
+        left: 0.25rem;
+        transition: transform 325ms ease-in;
+    }
+
+    .skip-link:focus{
+        transform: translateY(0);
+    }
     main{
         grid-area: main;
         margin: 0;
@@ -59,25 +77,19 @@
         font-size: 1em;
 
     }
-    
-
     .yellow-line{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-
     .bdd{
         display: flex;
-        justify-content: center;
+        justify-content: start;
         flex-wrap: wrap;
     }
     .box-text{
         
         flex-grow: 0.2;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
         
     }
     
@@ -99,10 +111,13 @@
         border-bottom: 3px solid #e6bd43;
         text-underline-offset: 12px;
         width: 81%;
+        margin: 0 auto;
     }
     .bdd h4{
         width: 81%;
         font-size: 1em;
+        padding: 0rem 0rem 0 1rem;
+        max-width: 692px;
     }
     .yellow-line h4{
         width: 81%;
@@ -113,6 +128,7 @@
         width: 100%;
         padding: 2rem 1rem 0 1rem;
         height: auto;
+        max-width: 692px;
     }
     .yellow-line img{
         width: 81%;
@@ -208,13 +224,15 @@
     }
     .img-flex h3{
         width: 100%;
-        font-size: 1em;
+        font-size: 1.5em;
         text-align: center;
+        margin: 3rem 0 3rem 0;
     }
     .img-flex img{
-        width: 32%;
-        padding: 0rem;
-        margin: 2rem;
+        max-width: 20%;
+        margin: 3rem;
+        height: auto;
+    
     }
     .top-bottom-section{
         background-color: #e6bd43;
@@ -335,6 +353,12 @@
         flex-direction: row;
         justify-content: space-between;
     }
+    .contact-us-wrapper{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: #ECECEC;
+    }
     .contact {
         padding: 35px;
         background-color: #ECECEC;
@@ -353,7 +377,7 @@
     .contact-info .ikon{
         padding:0 10px 0 0
     }
-    #kart{
+    iframe{
         width: 100%;
         margin: 0;
         padding: 0;
@@ -362,6 +386,7 @@
         text-align: center;
         padding: 3rem 0;
         margin: 0;
+        font-size: 1.5em;
     }
     .send-us{
         background-color:#ECECEC;
@@ -451,6 +476,9 @@
         .top-bottom-section p{
             text-align: center;
         }
+        .contact-info .ikon{
+            padding: 0 17px 0 0;
+        }
         
     }
     
@@ -470,7 +498,6 @@
             flex-direction: row;
             align-items: center;
             column-gap: 1rem;
-
         }
         header nav ul{
             flex-direction:row;
@@ -479,7 +506,32 @@
         }
         .yellow-btn:hover{
             color: #e6bd43;
-            background-color: #000;
+            background-color: #252525
+        }
+        .yellow-line h2{
+            width: 100%;
+            margin: 2rem 1rem;
+            font-size: 1.5em;
+        }
+        .border-boxes a:hover{
+            background-color:#252525;
+            color: #e6bd43;
+        }
+        .bdd h2{
+            width: 100%;
+            margin: 2rem 1rem;
+            font-size: 1.5em;
+        }
+        /* Det med at portfolio bildene blir større gradvis når jeg hovrer over, fikk jeg av youtube videoen https://www.youtube.com/watch?v=UL60B8TdxAU
+        skjekk kilde 1.9 for mer info
+        */
+        .box-text{
+            transition: .3s ease;
+        }
+        .box-text:hover{
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -ms-transform:scale(1.1))
         }
         .middle-section h2{
             font-size:1.5em;
@@ -512,7 +564,7 @@
             margin: 0;
         }
         .black-brd-btn:hover{
-            background-color: #000;
+            background-color: #252525;
             color: #e6bd43;
         }
         .flex-container{
@@ -528,9 +580,37 @@
             font-size: 2em;
         }
         #signup:hover{
-            background-color:black ;
+            background-color:#252525 ;
             color: #e6bd43;
         }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .contact-us-wrapper {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            grid-column: 1/3;
+            background-color: #ECECEC;
+            font-size: 1.5em;
+          }
+          .contact-info .ikon{
+            padding: 0 15px 0 0;
+          }
+          .send-us{
+            padding: 0 0 0 1rem;
+          }
+          .send-us form{
+            max-width: 400px;
+          }
+        .contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0 10rem 1rem;
+        }
+
         footer{
             justify-content: space-between;
             flex-direction: row;
@@ -585,5 +665,22 @@
         }
         .newsletter form {
             justify-content: center;
+        }
+        .img-flex img{
+        margin: 1rem;
+        }
+        .img-flex h3{
+            font-size: 2em;
+        }
+        .send-us h3{
+            font-size: 2em;
+        }
+        .contact-info .ikon{
+            padding: 0 21px 0 0;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .contact-info .ikon{
+            padding: 0 30px 0 0 ;
         }
     }
