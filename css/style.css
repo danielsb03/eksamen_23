@@ -2,7 +2,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
         box-sizing: border-box;
       }
-
     body{
         margin:0;
         width: 100%;
@@ -45,7 +44,6 @@
         color: black;
         text-decoration: none;
     }
-    
     /* Fikk dette av en youtube video om hvordan man kan pynte en skip to main link https://www.youtube.com/watch?v=jDDaOFr9nqQ */
     .skip-link{
         position: absolute;
@@ -57,7 +55,6 @@
         left: 0.25rem;
         transition: transform 325ms ease-in;
     }
-
     .skip-link:focus{
         transform: translateY(0);
     }
@@ -89,11 +86,8 @@
     }
     .box-text{
         
-        flex-grow: 0.2;
-        
+        flex-grow: 0.2;  
     }
-    
-
     /*Dette fikk jeg av en kommentar i stack overflow https://stackoverflow.com/questions/7294369/how-can-i-make-an-underline-some-pixels-longer-than-the-headline*/
     .yellow-line h2{
         display: inline-block;
@@ -103,7 +97,6 @@
         text-underline-offset: 12px;
         width: 81%;
     }
-
     .bdd h2{
         display: inline-block;
         font-size: 1em;
@@ -134,14 +127,12 @@
         width: 81%;
     padding: 2rem 0 0 0;
     }
-
     .border-boxes{
         display: flex;
     flex-wrap: wrap;
     justify-content: start;
     margin: 0 0 0 1.5rem;
     }
-
     .border-boxes a{
         max-width: 50%;
         height: auto;
@@ -151,14 +142,10 @@
         color: black;
         text-decoration: none;
     }
-    
-
     .yellow-btn span{
         font-weight: 600;
         font-size: 1.2em;
     }
-
-
     /* Bilde kom fra pinterest, se kilde 1.2 for mer info*/
     /* alt av justering med background fikk jeg fra youtube videon https://www.youtube.com/watch?v=zHZRFwWQt2w
     se kilde 1.3 for mer info */ 
@@ -175,23 +162,18 @@
         padding: 5rem;
 
     }
-
-
     .top-section h1{
         margin: 0 0 1rem 0;
         font-size: 1.8em;
     text-align: center;
     
     }
-    
-
     .a-top-section{
     background-image: url(/eksamen_23/img/latop-phone.jpg);
     background-size: cover;
     text-align: start;
     padding: 5rem;
     }
-
     .our-company{
         background-color: white;
         padding: 2rem;
@@ -232,7 +214,6 @@
         max-width: 20%;
         margin: 3rem;
         height: auto;
-    
     }
     .top-bottom-section{
         background-color: #e6bd43;
@@ -240,7 +221,6 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-
     }
     #tps-flex{
         display: flex;
@@ -252,7 +232,6 @@
         font-size: 1.5em;
         text-align: start;
         margin: 3rem 0 0 0;
-
     }
     .top-bottom-section img{
         width: 100%;
@@ -447,7 +426,22 @@
         display: flex;
         color: white;
     }
-
+    .arrow{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding: 0 4rem 0 0rem;
+    }
+    .to-top{
+        background-color: #252525;
+        position: fixed;
+        bottom: -3px;
+        right: 32px;
+        width: 60px;
+        padding: 24px;
+        border-radius: 5px;
+    }
+    
     .fa-brands{
         color: white;
     }
